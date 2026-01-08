@@ -7,7 +7,7 @@ public class FreeFlyCamera : MonoBehaviour
     public float fastMultiplier = 0.2f;
 
     [Header("Mouse Look")]
-    public float mouseSensitivity = 2f;
+    public float mouseSensitivity = 4f;
     public float maxLookAngle = 85f;
 
     float yaw;
@@ -37,8 +37,8 @@ public class FreeFlyCamera : MonoBehaviour
 
     void Look()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * 100f * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * 100f * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
         yaw += mouseX;
         pitch -= mouseY;
